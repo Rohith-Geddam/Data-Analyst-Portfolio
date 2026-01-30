@@ -1,4 +1,37 @@
-# Fintech Subscription Retention & LTV Optimization
+# Data Analytics Portfolio
+
+This repository contains four end-to-end analytics projects designed to simulate
+real-world workflows used in Finance, Fintech, Marketing Analytics, and Risk Management teams.
+
+Each project follows a consistent professional pipeline:
+
+Raw / Synthetic Data  
+→ Data Cleaning & Transformation (SQL / Logic)  
+→ Business Analysis  
+→ Executive Dashboards (Power BI)  
+→ Actionable Recommendations
+
+## Projects Included
+
+1. Fintech Subscription Retention & LTV Optimization
+2. Investment Performance Monitor  
+3. Marketing ROI & Budget Reallocation Analysis  
+4. Risk Modelling & Cost Concentration Analysis
+
+All dashboards are designed to support effective business decision-making,
+with a focus on financial impact rather than technical complexity.
+
+## Tools & Skills Demonstrated
+- SQL-based data cleaning and aggregation
+- KPI design and financial metric validation
+- Power BI dashboard design (Executive & Analytical views)
+- Business recommendations based on the data
+
+------
+
+# Overview of Projects
+
+# 1.Fintech Subscription Retention & LTV Optimization
 
 ## Business Context
 A mid-sized Fintech company experienced rising customer churn, creating pressure on
@@ -75,7 +108,7 @@ initiatives, balancing analytical rigor with executive interpretability.
 
 -------
 
-# Investment Performance Monitor
+# 2.Investment Performance Monitor
 
 ## Business Context
 Investment performance was historically evaluated using absolute returns,
@@ -109,7 +142,6 @@ are essential for comparing strategies and ensuring capital is deployed efficien
 
 <img width="1137" height="642" alt="Screenshot 2026-01-29 120148" src="https://github.com/user-attachments/assets/bc1dbf2a-7485-403c-b88b-cc4ec0a6b8d3" />
 
-
 ## Key Insight
 The portfolio demonstrates strong risk-adjusted performance, with a Sharpe ratio
 above 1.5, indicating efficient return generation relative to observed volatility.
@@ -126,7 +158,7 @@ supporting informed performance evaluation rather than raw return comparisons.
 
 -----
 
-# Marketing ROI & Budget Reallocation Analysis
+# 3.Marketing ROI & Budget Reallocation Analysis
 
 ## Business Context
 Marketing expenditure was increasing, but leadership lacked visibility into which
@@ -136,7 +168,7 @@ channels were driving meaningful returns versus inefficient spend.
 The objective was to evaluate marketing efficiency using correctly weighted ROI
 metrics and identify data-backed budget reallocation opportunities.
 
-## Why This Matters
+## Solves-
 Misallocated marketing budgets can silently erode profitability.
 Accurate ROI measurement is critical for scaling growth efficiently.
 
@@ -160,7 +192,6 @@ Accurate ROI measurement is critical for scaling growth efficiently.
 
 <img width="1297" height="737" alt="Screenshot 2026-01-29 172948" src="https://github.com/user-attachments/assets/75d7ba9d-194a-44d7-8f38-a2319b411d4d" />
 
-
 ## Key Insight
 Email and Affiliate channels deliver materially higher ROI at lower spend.
 Underperforming paid channels consume a disproportionate share of budget relative
@@ -181,7 +212,7 @@ Delivers a clear, financially grounded framework for marketing budget optimizati
 
 -----
 
-# Risk Modelling & Cost Concentration Analysis
+# 4.Risk Modelling & Cost Concentration Analysis
 
 ## Business Context
 Claims costs were rising, but leadership lacked clarity on whether losses were broadly
@@ -191,7 +222,7 @@ distributed or concentrated among a small subset of risks.
 The objective was to assess cost concentration patterns and estimate a realistic
 savings opportunity through targeted risk mitigation.
 
-## Why This Matters
+## Solves-
 In insurance and risk-heavy environments, a small percentage of claims often drive
 the majority of losses. Identifying these patterns enables focused intervention.
 
@@ -214,7 +245,6 @@ the majority of losses. Identifying these patterns enables focused intervention.
 
 <img width="1362" height="773" alt="Screenshot 2026-01-29 172710" src="https://github.com/user-attachments/assets/1f8d30bf-a998-4846-b015-3cc7c3252369" />
 
-
 ## Key Insight
 Approximately 10–15% of claims account for the majority of losses,
 indicating a strong opportunity for targeted risk controls.
@@ -231,3 +261,12 @@ annual costs by ~$1.6–$1.8M without broad-based operational disruption.
 
 ## Outcome
 Provides leadership with a focused, financially credible risk prioritization framework.
+
+---
+
+## Portfolio Takeaway
+
+Across all four projects, the focus is on decision-supporting analytics rather than
+tool demonstration. The portfolio build based on how analytics is practiced in real
+organizations: working with imperfect data, making defensible assumptions, and
+communicating insights clearly.
