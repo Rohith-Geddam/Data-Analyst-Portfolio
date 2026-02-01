@@ -1,87 +1,80 @@
-## Subscription-based Fintech businesses rely heavily on recurring revenue. Even small increases in churn can materially impact Monthly Recurring Revenue (MRR) and long-term customer lifetime value.
+# Fintech Subscription Retention & LTV Optimization
 
-This project is created to simulate how a data analyst would:
+Subscription-based Fintech businesses rely heavily on recurring revenue.
+Even small increases in customer churn can materially impact Monthly Recurring Revenue
+(MRR) and long-term customer lifetime value.
 
-Diagnose churn drivers
+This project was created to simulate how a data analyst would diagnose churn drivers,
+quantify revenue risk, and support retention decisions for leadership.
 
-Quantify revenue risk
-
-Support retention decisions for leadership
+---
 
 ## Business Problem
+Leadership needed clear, actionable answers to the following questions:
 
-Leadership needed answers to three questions:
+- Which customer segments are driving churn?
+- Which subscription plans pose the highest revenue risk?
+- Where can targeted retention efforts deliver the greatest financial impact?
 
-Which customers are churning?
-
-Which subscription plans are most exposed?
-
-How much revenue is realistically at risk?
+---
 
 ## Dataset Overview
+- Synthetic subscription-level customer data
+- Includes:
+  - Missing plan and country values
+  - Invalid or incomplete churn dates
+  - Null revenue fields
 
-Synthetic subscription data (users, plans, churn, revenue)
+The dataset intentionally reflects real-world data imperfections rather than
+idealized academic examples.
 
-Intentionally messy: Missing plans and countries, Invalid churn dates, Null revenue values
+---
 
+## Step-by-Step Approach
 
+### Step 1: Data Cleaning (SQL)
+- Standardized plan and country fields
+- Validated customer lifecycle dates
+- Handled missing revenue values conservatively
+- Preserved records to avoid introducing bias
 
+📁 `sql/cleaning.sql`
 
-This reflects real production data, not curated datasets.
+---
 
-# Step-by-Step Approach
-## Step 1: Data Cleaning (SQL)
+### Step 2: Feature Engineering
+- Created churn flag
+- Calculated customer lifetime in days
+- Derived revenue exposure for churned customers
 
-Standardized categorical fields (plan, country)
+---
 
-Validated lifecycle dates
+### Step 3: Analysis
+- Aggregated churn metrics by plan and geography
+- Estimated revenue at risk from churned users
+- Prioritized customer segments by financial impact
 
-Imputed missing revenue conservatively
+📁 `sql/analysis.sql`
 
-Preserved records to avoid bias
+---
 
+### Step 4: Dashboarding
+- Executive overview dashboard with core KPIs
+- Deep-dive dashboard for diagnostic analysis
+- Designed for clarity and executive decision-making
 
+📁 `Dashboards/`
 
-## Step 2: Feature Engineering
-
-Created churn flag
-
-Calculated customer lifetime
-
-Derived revenue exposure
-
-## Step 3: Analysis
-
-Aggregated churn by plan and geography
-
-Calculated revenue at risk
-
-Prioritized segments by financial impact
-
-
-
-## Step 4: Dashboarding
-
-Executive KPI view
-
-Diagnostic deep-dive
-
-Focused on clarity, not metric overload
-
-
+---
 
 ## Key Decisions Made
+- Avoided dropping records solely due to missing values
+- Used weighted financial metrics instead of simple averages
+- Focused on monthly aggregation for executive interpretability
+- Explicitly documented assumptions and analytical constraints
 
-Avoided dropping rows with missing values
-
-Used weighted metrics instead of averages
-
-Focused on monthly aggregation for executive readability
-
-Explicitly documented assumptions and limitations
-
-
+---
 
 ## Outcome
-
-Provided a clear, financially grounded prioritization of retention initiatives with quantified revenue impact.
+Provided leadership with a clear, financially grounded framework to prioritize
+retention initiatives, balancing analytical rigor with business usability.
