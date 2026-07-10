@@ -27,6 +27,17 @@ with a focus on financial impact rather than technical complexity.
 - Power BI dashboard design (Executive & Analytical views)
 - Business recommendations based on the data
 
+## Shared SQL Utilities
+
+The project SQL uses reusable DuckDB macros for common transformations:
+
+- `clamp_non_negative` normalizes missing or negative financial values
+- `month_start` creates consistent monthly reporting buckets
+- `safe_divide` prevents division-by-zero errors in calculated metrics
+
+Run `SQL/Shared Utilities.sql` once in the current database session before running
+any project cleaning or analysis script.
+
 ------
 
 # Overview of Projects
