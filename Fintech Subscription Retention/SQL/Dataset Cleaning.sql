@@ -1,21 +1,31 @@
-CREATE TABLE Fintech_subscriptions_cleane_dataset AS
+CREATE TABLE Fintech_subscriptions_cleaned_dataset AS
+WITH normalized AS (
+  SELECT
+    user_id,
+    COALESCE(plan, 'Unknown') AS plan,
+    signup_date,
+    CASE
+      WHEN churn_date < signup_date THEN NULL
+      ELSE churn_date
+    END AS churn_date,
+    monthly_fee,
+    COALESCE(country, 'Unknown') AS country
+  FROM Fintech_Subscriptions_Data_raw
+)
 SELECT
   user_id,
-  COALESCE(plan, 'Unknown') AS plan,
+  plan,
   signup_date,
-  CASE
-    WHEN churn_date < signup_date THEN NULL
-    ELSE churn_date
-  END AS churn_date,
+  churn_date,
   COALESCE(
     monthly_fee,
     MEDIAN(monthly_fee) OVER (PARTITION BY plan)
   ) AS monthly_fee,
-  COALESCE(country, 'Unknown') AS country,
+  country,
   CASE WHEN churn_date IS NOT NULL THEN 1 ELSE 0 END AS is_churned,
-  DATEDIFF(
-    day,
+  DATE_DIFF(
+    'day',
     signup_date,
     COALESCE(churn_date, CURRENT_DATE)
   ) AS customer_lifetime_days
-FROM Fintech_Subscriptions_Data_raw 
+FROM normalized;
