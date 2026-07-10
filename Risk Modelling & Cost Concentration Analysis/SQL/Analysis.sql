@@ -9,5 +9,5 @@ GROUP BY risk_category;
 SELECT
   claim_amount,
   SUM(claim_amount) OVER (ORDER BY claim_amount DESC)
-  / SUM(claim_amount) OVER () AS cumulative_cost_pct
+  / NULLIF(SUM(claim_amount) OVER (), 0) AS cumulative_cost_pct
 FROM Insurance_claims_cleaned_dataset;
