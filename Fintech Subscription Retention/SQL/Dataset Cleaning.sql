@@ -1,4 +1,4 @@
-CREATE TABLE Fintech_subscriptions_cleane_dataset AS
+CREATE TABLE Fintech_subscriptions_cleaned_dataset AS
 SELECT
   user_id,
   COALESCE(plan, 'Unknown') AS plan,
