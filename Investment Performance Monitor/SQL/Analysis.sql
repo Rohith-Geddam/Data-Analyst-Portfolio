@@ -8,4 +8,4 @@ GROUP BY month;
 -- Volatility
 SELECT
   STDDEV(portfolio_return) AS volatility
-FROM investment_returns_cleaned_dataset
+FROM investment_returns_cleaned_dataset;

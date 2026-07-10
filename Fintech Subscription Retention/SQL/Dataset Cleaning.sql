@@ -1,4 +1,4 @@
-CREATE TABLE Fintech_subscriptions_cleane_dataset AS
+CREATE TABLE Fintech_subscriptions_cleaned_dataset AS
 SELECT
   user_id,
   COALESCE(plan, 'Unknown') AS plan,
@@ -18,4 +18,4 @@ SELECT
     signup_date,
     COALESCE(churn_date, CURRENT_DATE)
   ) AS customer_lifetime_days
-FROM Fintech_Subscriptions_Data_raw 
+FROM Fintech_Subscriptions_Data_raw;
