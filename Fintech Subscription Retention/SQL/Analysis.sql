@@ -11,6 +11,6 @@ GROUP BY plan;
 SELECT
   plan,
   SUM(monthly_fee) AS monthly_revenue_at_risk
-FROM fintech_cleaned
+FROM Fintech_subscriptions_cleaned_dataset
 WHERE is_churned = 1
 GROUP BY plan;
